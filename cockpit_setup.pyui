@@ -1,0 +1,342 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{170, 213}, {70, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "parse_form",
+          "frame" : "{{120, 144}, {80, 32}}",
+          "title" : "Save",
+          "uuid" : "150B4BEB-90FD-42F5-BCFF-E5B5BEA19E9F",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.870968,1.000000,1.000000,1.000000)",
+          "name" : "button1",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{245, 213}, {70, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "close_ui",
+          "frame" : "{{164, 225}, {80, 32}}",
+          "title" : "Cancel",
+          "uuid" : "FD35562A-FFDE-4241-9CED-0DE0D307B5C1",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.870968,1.000000,1.000000,1.000000)",
+          "name" : "button2",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{13, 10}, {130, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{129, 225}, {150, 32}}",
+          "uuid" : "28D26DD0-6D58-4870-A2F0-4C0BA490D7AD",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Stem length",
+          "name" : "label1",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{13, 50}, {130, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{129, 225}, {150, 32}}",
+          "uuid" : "0AE2D32C-7377-4FB4-A42B-AFCCD8985F3E",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Stem angle",
+          "name" : "label2",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{13, 90}, {130, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{129, 225}, {150, 32}}",
+          "uuid" : "EA90A10C-8834-4EE1-9A80-83768BBF85B8",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Stem height",
+          "name" : "label3",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{13, 130}, {130, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{129, 225}, {150, 32}}",
+          "uuid" : "3DCADE27-AE94-4984-A817-338EF78390A7",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Top cap height",
+          "name" : "label4",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{13, 170}, {130, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{129, 225}, {150, 32}}",
+          "uuid" : "17E62658-5F2B-4A65-89CB-6C55C6DBC321",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Spacer stack",
+          "name" : "label5",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 10}, {115, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "stem_length",
+          "action" : "validate_data",
+          "frame" : "{{110, 118}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "5E71C8F2-40BF-4B4F-AE46-F613BC1365DB",
+          "alignment" : "left",
+          "text" : "110",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 50}, {115, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "stem_angle",
+          "action" : "validate_data",
+          "frame" : "{{110, 118}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "D7310B0B-ED61-49C2-8C94-15EC336B63C2",
+          "alignment" : "left",
+          "text" : "-6",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 90}, {115, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "stem_stack",
+          "action" : "validate_data",
+          "frame" : "{{110, 118}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "A0CBDF27-2F46-4502-B377-5F1B272946C0",
+          "alignment" : "left",
+          "text" : "40",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 130}, {115, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "top_cap_stack",
+          "action" : "validate_data",
+          "frame" : "{{110, 118}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "3BEFF276-D1C6-48A1-B367-4D09E6F591DA",
+          "alignment" : "left",
+          "text" : "15",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{151, 170}, {115, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "name" : "spacer_stack",
+          "action" : "validate_data",
+          "frame" : "{{110, 118}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "3A56DFF0-3ABD-43FD-A580-81BC97BE3DC2",
+          "alignment" : "left",
+          "text" : "10",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{274, 10}, {40, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label6",
+          "frame" : "{{135, 118}, {150, 32}}",
+          "uuid" : "72C61974-1506-4558-9B11-EADE3D9AFC14",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{274, 50}, {40, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label7",
+          "frame" : "{{135, 118}, {150, 32}}",
+          "uuid" : "F1917990-9A24-4BAC-9EA4-128ECDE55C21",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "deg",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{274, 90}, {40, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label8",
+          "frame" : "{{135, 118}, {150, 32}}",
+          "uuid" : "9C88701C-3B8E-4A76-A2E2-B28C2B6E2EAB",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{274, 130}, {40, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label9",
+          "frame" : "{{135, 118}, {150, 32}}",
+          "uuid" : "E6CC83F9-2665-4D97-9B89-C2BD951027BA",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{274, 170}, {40, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label10",
+          "frame" : "{{135, 118}, {150, 32}}",
+          "uuid" : "E5BCE585-7B3B-4D4F-9298-A8B13BDBBDF6",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {325, 255}}",
+    "class" : "View",
+    "attributes" : {
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "Geometry",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

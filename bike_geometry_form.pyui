@@ -1,0 +1,765 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 15}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "placeholder" : "Eddy Merckx San Remo",
+          "flex" : "W",
+          "name" : "bike_name",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "C6651EF2-934D-4CAC-8949-B46F980B2305",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 55}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "placeholder" : "58",
+          "flex" : "W",
+          "name" : "frame_size",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "5C98C22C-49B2-4E2B-A003-E3E52DB6A49C",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 95}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "uuid" : "1C16BADD-CC93-49A9-BEA1-8C7627EC08B2",
+          "flex" : "W",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "700c",
+          "placeholder" : "700c",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "name" : "wheel_size",
+          "font_size" : 17
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 138}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "bb_drop",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "BF45605F-DDC9-4548-B486-AF2C1DFB3396",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 178}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "fork_length",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "1F734596-19BE-4CA2-9EE1-0F64FF88EA4E",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 218}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "fork_offset",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "6A701A81-13C7-4E5A-B2B5-3FAD4BAE55B5",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 258}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "top_tube_length",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "9546E597-965B-45E8-93A4-5A9436C1A5F7",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 298}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "head_tube_length",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "00E76128-87B9-4832-8245-B80A5E0B92EB",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 338}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "name" : "head_tube_angle",
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "B7EEF89B-0EF0-49CE-8DFB-A59FD0C00DE8",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "font_size" : 17,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 15}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "4AACF7B8-77F8-4506-80F7-77ED2E408372",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Bike Name",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 55}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label2",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "0D89858B-6AF2-48F9-BEBC-3965E4AC4304",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Frame size",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 95}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label3",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D5009397-BDB7-49F3-A13E-F8A969340C81",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Wheel size",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 138}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label4",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "C36754D8-EB2A-437F-8E64-A892E4D87F70",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "bottom bracket drop",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 178}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label5",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "6EABFC83-7EF1-42E9-A68E-FDAE2338F1CB",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Fork length",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 218}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label6",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "1A0115B4-905B-4F25-9EAB-0EE59286317A",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Fork offset",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 258}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label7",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "DCB4A34B-4F6D-4C8B-B7AF-37E843684270",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Top tube length",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 298}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label8",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "300E8EF7-9CE5-4CB4-A9D9-2F609E078DB7",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Head tube length",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 338}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label9",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "3C7844FA-3ACB-4996-B792-06C9AE086A72",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Head tube angle",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 378}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "D9F44FB0-8E61-4286-B24D-E9CBB8281E21",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Seat tube angle",
+          "name" : "label10",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 418}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "8583372D-B502-485F-90A7-5A2046323621",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Chainstay length",
+          "name" : "label11",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 458}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "4CCF8894-4C89-4A6C-A5ED-C2848AEF6CC2",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Seat tube length",
+          "name" : "label12",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 498}, {175, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "96F6D8D0-589A-4A70-AC83-22B0ED0D8FCE",
+          "class" : "Label",
+          "alignment" : "right",
+          "text" : "Wheelbase (spec)",
+          "name" : "label13",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 378}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "font_size" : 17,
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "FE08C5A6-0863-45DD-9590-711B68572ACB",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "seat_tube_angle",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 418}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "font_size" : 17,
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "C63C01C3-3D64-4C66-A1AE-AE4DAE472800",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "chainstay_length",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 458}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "font_size" : 17,
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "uuid" : "2FB08112-32FD-4711-B747-638C93E264D8",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "seat_tube_length",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{195, 498}, {200, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "action" : "validate_data",
+          "flex" : "W",
+          "font_size" : 17,
+          "frame" : "{{170, 254}, {200, 32}}",
+          "spellchecking_type" : "no",
+          "class" : "TextField",
+          "uuid" : "E194E8AF-AC07-4B5D-975B-5D17A61E0D02",
+          "alignment" : "left",
+          "autocorrection_type" : "no",
+          "name" : "wheelbase_spec",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{486, 498}, {80, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "close_ui",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "cancel",
+          "uuid" : "A4D2CAEC-6D91-458B-99E9-0DFC96CAB10F",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.870968,1.000000,1.000000,1.000000)",
+          "name" : "cancel",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{486, 428}, {80, 62}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "parse_form",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "Save",
+          "uuid" : "FC68CD36-AD8C-4228-9213-6591E692BC85",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.870968,1.000000,1.000000,1.000000)",
+          "name" : "save_btn",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{486, 338}, {80, 64}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "load_cockpit_setup",
+          "frame" : "{{230, 254}, {80, 32}}",
+          "title" : "Add\/edit cockpit setup...",
+          "uuid" : "485809BF-EF2F-4BFF-91DB-4E830B546494",
+          "class" : "Button",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(1.000000,1.000000,0.903226,1.000000)",
+          "name" : "cockpit",
+          "font_size" : 15
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 138}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "name" : "label14",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 178}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_size" : 18,
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "9D3A7267-901B-41FB-9B18-A5BEC6D4576C",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "name" : "label15",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 376}, {52, 31}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "deg",
+          "font_size" : 18,
+          "name" : "label14"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 297}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "name" : "label14"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 337}, {52, 31}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "deg",
+          "font_size" : 18,
+          "name" : "label14"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 258}, {52, 31}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "name" : "label14"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 218}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "name" : "label14"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 415}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label14",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 455}, {52, 31}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label14",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{403, 498}, {52, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label14",
+          "frame" : "{{195, 254}, {150, 32}}",
+          "uuid" : "7A831628-2EEE-43C4-A9D3-5D86787A9978",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "mm",
+          "font_size" : 18,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {580, 540}}",
+    "class" : "View",
+    "attributes" : {
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "name" : "Add Bike Geometry",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
