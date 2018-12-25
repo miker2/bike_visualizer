@@ -9,7 +9,7 @@
         "class" : "Button",
         "attributes" : {
           "border_width" : 1,
-          "action" : "parse_form",
+          "action" : "self.parse_form",
           "frame" : "{{120, 144}, {80, 32}}",
           "title" : "Save",
           "uuid" : "150B4BEB-90FD-42F5-BCFF-E5B5BEA19E9F",
@@ -29,7 +29,7 @@
         "class" : "Button",
         "attributes" : {
           "border_width" : 1,
-          "action" : "close_ui",
+          "action" : "self.close_ui",
           "frame" : "{{164, 225}, {80, 32}}",
           "title" : "Cancel",
           "uuid" : "FD35562A-FFDE-4241-9CED-0DE0D307B5C1",
@@ -48,13 +48,13 @@
         "frame" : "{{13, 10}, {130, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label1",
           "frame" : "{{129, 225}, {150, 32}}",
           "uuid" : "28D26DD0-6D58-4870-A2F0-4C0BA490D7AD",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Stem length",
-          "name" : "label1",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -66,13 +66,13 @@
         "frame" : "{{13, 50}, {130, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label2",
           "frame" : "{{129, 225}, {150, 32}}",
           "uuid" : "0AE2D32C-7377-4FB4-A42B-AFCCD8985F3E",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Stem angle",
-          "name" : "label2",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -84,13 +84,13 @@
         "frame" : "{{13, 90}, {130, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label3",
           "frame" : "{{129, 225}, {150, 32}}",
           "uuid" : "EA90A10C-8834-4EE1-9A80-83768BBF85B8",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Stem height",
-          "name" : "label3",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -102,13 +102,13 @@
         "frame" : "{{13, 130}, {130, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label4",
           "frame" : "{{129, 225}, {150, 32}}",
           "uuid" : "3DCADE27-AE94-4984-A817-338EF78390A7",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Top cap height",
-          "name" : "label4",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -120,13 +120,13 @@
         "frame" : "{{13, 170}, {130, 32}}",
         "class" : "Label",
         "attributes" : {
-          "font_size" : 18,
+          "name" : "label5",
           "frame" : "{{129, 225}, {150, 32}}",
           "uuid" : "17E62658-5F2B-4A65-89CB-6C55C6DBC321",
           "class" : "Label",
           "alignment" : "right",
           "text" : "Spacer stack",
-          "name" : "label5",
+          "font_size" : 18,
           "font_name" : "<System>"
         },
         "selected" : false
@@ -138,8 +138,8 @@
         "frame" : "{{151, 10}, {115, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "stem_length",
-          "action" : "validate_data",
+          "action" : "self.validate_data",
+          "font_size" : 17,
           "frame" : "{{110, 118}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -147,7 +147,7 @@
           "alignment" : "left",
           "text" : "110",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "stem_length",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -159,8 +159,8 @@
         "frame" : "{{151, 50}, {115, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "stem_angle",
-          "action" : "validate_data",
+          "action" : "self.validate_data",
+          "font_size" : 17,
           "frame" : "{{110, 118}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -168,7 +168,7 @@
           "alignment" : "left",
           "text" : "-6",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "stem_angle",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -180,8 +180,8 @@
         "frame" : "{{151, 90}, {115, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "stem_stack",
-          "action" : "validate_data",
+          "action" : "self.validate_data",
+          "font_size" : 17,
           "frame" : "{{110, 118}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -189,7 +189,7 @@
           "alignment" : "left",
           "text" : "40",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "stem_stack",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -201,8 +201,8 @@
         "frame" : "{{151, 130}, {115, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "top_cap_stack",
-          "action" : "validate_data",
+          "action" : "self.validate_data",
+          "font_size" : 17,
           "frame" : "{{110, 118}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -210,7 +210,7 @@
           "alignment" : "left",
           "text" : "15",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "top_cap_stack",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -222,8 +222,8 @@
         "frame" : "{{151, 170}, {115, 32}}",
         "class" : "TextField",
         "attributes" : {
-          "name" : "spacer_stack",
-          "action" : "validate_data",
+          "action" : "self.validate_data",
+          "font_size" : 17,
           "frame" : "{{110, 118}, {200, 32}}",
           "spellchecking_type" : "default",
           "class" : "TextField",
@@ -231,10 +231,10 @@
           "alignment" : "left",
           "text" : "10",
           "autocorrection_type" : "default",
-          "font_size" : 17,
+          "name" : "spacer_stack",
           "font_name" : "<System>"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -243,13 +243,13 @@
         "frame" : "{{274, 10}, {40, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label6",
+          "font_size" : 18,
           "frame" : "{{135, 118}, {150, 32}}",
           "uuid" : "72C61974-1506-4558-9B11-EADE3D9AFC14",
           "class" : "Label",
           "alignment" : "left",
           "text" : "mm",
-          "font_size" : 18,
+          "name" : "label6",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -261,13 +261,13 @@
         "frame" : "{{274, 50}, {40, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label7",
+          "font_size" : 18,
           "frame" : "{{135, 118}, {150, 32}}",
           "uuid" : "F1917990-9A24-4BAC-9EA4-128ECDE55C21",
           "class" : "Label",
           "alignment" : "left",
           "text" : "deg",
-          "font_size" : 18,
+          "name" : "label7",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -279,13 +279,13 @@
         "frame" : "{{274, 90}, {40, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label8",
+          "font_size" : 18,
           "frame" : "{{135, 118}, {150, 32}}",
           "uuid" : "9C88701C-3B8E-4A76-A2E2-B28C2B6E2EAB",
           "class" : "Label",
           "alignment" : "left",
           "text" : "mm",
-          "font_size" : 18,
+          "name" : "label8",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -297,13 +297,13 @@
         "frame" : "{{274, 130}, {40, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label9",
+          "font_size" : 18,
           "frame" : "{{135, 118}, {150, 32}}",
           "uuid" : "E6CC83F9-2665-4D97-9B89-C2BD951027BA",
           "class" : "Label",
           "alignment" : "left",
           "text" : "mm",
-          "font_size" : 18,
+          "name" : "label9",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -315,13 +315,13 @@
         "frame" : "{{274, 170}, {40, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label10",
+          "font_size" : 18,
           "frame" : "{{135, 118}, {150, 32}}",
           "uuid" : "E5BCE585-7B3B-4D4F-9298-A8B13BDBBDF6",
           "class" : "Label",
           "alignment" : "left",
           "text" : "mm",
-          "font_size" : 18,
+          "name" : "label10",
           "font_name" : "<System>"
         },
         "selected" : false
@@ -330,11 +330,11 @@
     "frame" : "{{0, 0}, {325, 255}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
       "name" : "Geometry",
-      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
