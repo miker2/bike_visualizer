@@ -6,6 +6,7 @@
 import console
 import ui
 from bike_geometry import CockpitConfig
+from point import Point
 
 class CockpitSetupView (ui.View):
 	def __init__(self, **kwargs):
