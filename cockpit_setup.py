@@ -1,8 +1,3 @@
-# I need to turn this into a python object. It will contain all of the UI setup, all of the member
-# data, etc.
-# The object will then be fully self contained. It can be create from the interactive shell, and
-# be responsible for producing all necessary data.
-
 import console
 import ui
 from bike_geometry import CockpitConfig
@@ -10,6 +5,7 @@ from point import Point
 
 class CockpitSetupView (ui.View):
 	def __init__(self, **kwargs):
+		super(CockpitSetupView, self).__init__(kwargs)
 		self.v = ui.load_view('cockpit_setup.pyui')
 		self.v.present('sheet')
 		

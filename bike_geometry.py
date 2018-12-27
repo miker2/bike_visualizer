@@ -20,6 +20,9 @@ from point import Point
 DEG2RAD = math.pi/180
 
 class BikeInfo (object):
+	""" Base class for bike info objects (BikeGeometry & CockpitConfig). This adds a function that
+	    makes it easy to get the class member variables as a dictionary. """
+	# NOTE: This should be expanded to support outputting a JSON string for storage purposes.
 	def __init__(self):
 		pass
 		

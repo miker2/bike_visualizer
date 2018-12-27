@@ -1,7 +1,7 @@
-import cmath
+import math
 from typing import Tuple
 
-class Point:
+class Point (object):
 	def __init__(self, x:float, y:float):
 		self._x = x
 		self._y = y
@@ -26,8 +26,8 @@ class Point:
 		return (self.x, self.y)
 		
 	def rotate(self, angle):
-		ct = cmath.cos(angle)
-		st = cmath.sin(angle)
+		ct = math.cos(angle)
+		st = math.sin(angle)
 		return Point(ct * self.x - st * self.y, st * self.x + ct * self.y)
 
 	def __add__(self, point):
@@ -41,5 +41,5 @@ class Point:
 		return Point(-self.x, -self.y)
 
 	def __str__(self):
-		return "(%-0.4f, %-0.4f)" % (self.x, self.y)
+		return "({self.x: .4f}, {self.y: .4f})".format(self=self)
 
