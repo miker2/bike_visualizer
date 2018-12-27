@@ -1,6 +1,7 @@
 import console
 import ui
 import objc_util
+from bike_geometry import BikeGeometry
 from cockpit_setup import CockpitSetupView
 
 class BikeGeometryForm (ui.View):
@@ -27,6 +28,12 @@ class BikeGeometryForm (ui.View):
 			sender.text_color = 'red'
 			return False
 			
+	def not_empty(self, sender):
+		if len(sender.text) > 0:
+			return True
+		else:
+			return False
+			
 	def all_valid(self, view):
 		# Walk through the view entrys and check that they are valid (if they are a TextField)
 		print(view.subviews)
@@ -44,16 +51,17 @@ class BikeGeometryForm (ui.View):
 		print("Clicking this button will parse all of the form entrys and save them to the database!")
 		# We only want to be able to do this once all of the forms entries 
 		# are valid! Until then, the 'Save' button should be grayed out!
-		if not all_valid(self.v):
+		if not self.all_valid(self.v):
 			console.alert('Please finish filling out the form!','Check for blank fields and errors', 'OK',
 				hide_cancel_button=True)
 			return
-		bike_data = BikeGeometry(int(self.v['stem_length'].text),
-			int(self.v['stem_angle'].text), int(self.v['top_cap_stack'].text), 
-			int(self.v['spacer_stack'].text), int(self.v['stem_stack'].text))
-		# Now we need to put this data somewhere. Ideally, the cockpit data is associated with the bike
-		# geometry!
-		
+		bike_data = BikeGeometry()
+		bike_data_dict = bike_data.__dict__
+		for key,vals in bike_data_dict.items():
+			bike_data_dict[key] = self.v[key].text
+		print(bike_data_dict)
+		print(bike_data.__dict__)
+				
 		self.close_ui(sender)
 		
 	def load_cockpit_setup(self, sender):
