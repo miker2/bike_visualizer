@@ -14,21 +14,47 @@
 # We will need some tools like in my spreadsheet that allow for the calculation of fork properties
 # if other geometric properties are known (wheelbase, stack, trail, etc)
 
+import json
 import math
+import sys
 from point import Point
 
 DEG2RAD = math.pi/180
+
+def bikeInfoFromJson(jstr):
+	jdict = json.loads(jstr)
+	print(jdict)
+	newClass = getattr(sys.modules[__name__],jdict['type'])
+	print(newClass)
+	return newClass.fromDict(jdict['data'])
+	
 
 class BikeInfo (object):
 	""" Base class for bike info objects (BikeGeometry & CockpitConfig). This adds a function that
 	    makes it easy to get the class member variables as a dictionary. """
 	# NOTE: This should be expanded to support outputting a JSON string for storage purposes.
+	
 	def __init__(self):
-		pass
+		self.TEST = self.__name__
+		
+	@property
+	def TYPE(self):
+		return self.__class__.__name__
 		
 	def as_dict(self):
 		return { key:value for key, value in self.__dict__.items() if not key.startswith('__') and \
 			not callable(key)}
+			
+	def toJson(self):
+		return json.dumps({'type': self.TYPE, 'data': self.as_dict()})
+		
+	@classmethod
+	def fromDict(cls, data):
+		#print('data is {}'.format(data))
+		for key, vals in data.items():
+			setattr(cls, key, vals)
+		#print('cls.__dict__ = {}'.format(cls.__dict__))
+		return cls
 
 class BikeGeometry (BikeInfo):
 	""" This is a basic storage container for bicycle geometry information. It 
@@ -37,7 +63,6 @@ class BikeGeometry (BikeInfo):
 	    CockpitConfig class in order to determine the stack/reach of various 
 	    points on the cockpit of the bicycle relative to the bottom bracket."""
 	def __init__(self):
-		# I forget how to code in python, but I'll figure it out again pretty soon
 		# My bike geometry class needs the following properties:
 		self.bike_name = ""
 		self.frame_size = 58;
@@ -52,15 +77,17 @@ class BikeGeometry (BikeInfo):
 		self.chainstay_length = 0
 		self.seat_tube_length = 0
 		self.wheelbase_spec = 0
+		print('class name = {}'.format(self.TYPE))
 	
 class CockpitConfig (BikeInfo):
 	"""  """
-	def __init__(self, sl, sa, tch, sph, sh=40):
+	def __init__(self, sl=110, sa=-6, tch=15, sph=20, sh=40):
 		self.stem_length = sl;
 		self.stem_angle = sa;
 		self.top_cap_stack = tch;
 		self.spacer_stack = sph;
 		self.stem_stack = sh;
+		print('class name = {}'.format(self.TYPE))
 		
 	@property
 	def stack(self):
@@ -84,6 +111,7 @@ class GeometryMath (object):
 	
 	def __init__(self, bike_geometry):
 		self.geometry = bike_geometry;
+		self.update()
 		
 	def update(self):
 		gm = self.geometry
@@ -98,4 +126,3 @@ class GeometryMath (object):
 		   gm.bb_drop)
 		   
 
-		

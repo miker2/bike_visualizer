@@ -47,9 +47,10 @@ class CockpitSetupView (ui.View):
 		if not self.all_valid(self.v):
 			console.alert('Please finish filling out the form!','OK')
 			return
-		self.cockpit_data = CockpitConfig(int(self.v['stem_length'].text),
-			int(self.v['stem_angle'].text), int(self.v['top_cap_stack'].text), 
-			int(self.v['spacer_stack'].text), int(self.v['stem_stack'].text))
+
+		self.cockpit_data = CockpitConfig()
+		for key in self.cockpit_data.as_dict().keys():
+			setattr(self.cockpit_data, key, int(self.v[key].text))
 		# Now we need to put this data somewhere. Ideally, the cockpit data is associated with a
 		# BikeGeometry object!
 		print(self.cockpit_data)
@@ -58,9 +59,12 @@ class CockpitSetupView (ui.View):
 		# Just as a test, this works: cockpit_data.__dict__['stem_angle'] = 7
 		print(self.cockpit_data.as_dict())
 		print(self.cockpit_data.handlebar_offset(90))
+		
+		print(self.cockpit_data.toJson())
 								
 		self.close_ui(sender)
-	
-csv = CockpitSetupView()
-print("closed the view")
-print(csv.cockpit_data)
+
+if __name__ == '__main__':
+	csv = CockpitSetupView()
+	print("closed the view")
+	print(csv.cockpit_data)

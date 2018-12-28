@@ -56,18 +56,20 @@ class BikeGeometryForm (ui.View):
 				hide_cancel_button=True)
 			return
 		bike_data = BikeGeometry()
-		bike_data_dict = bike_data.__dict__
-		for key,vals in bike_data_dict.items():
-			bike_data_dict[key] = self.v[key].text
+		# NOTE: I need to figure out how to deal with converting the numbers to actual ints while leaving
+		# attributes that could be converted to ints (i.e. frame_size) as strings.
+		for key in bike_data.as_dict().keys():
+			setattr(bike_data, key, self.v[key].text)
 		print(bike_data_dict)
 		print(bike_data.__dict__)
-				
+		#print(self.csv.cockpit_data)
+		print(bike_data.toJson())
 		self.close_ui(sender)
 		
 	def load_cockpit_setup(self, sender):
 		print("This would load the cockpit setup details (If empty, load blank form, otherwise load " \
 			"current details to edit).")
-		CockpitSetupView()
+		selv.csv = CockpitSetupView()
 		print("cockpit setup loaded!")
 
 BikeGeometryForm()
