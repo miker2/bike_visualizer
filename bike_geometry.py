@@ -156,13 +156,13 @@ class GeometryMath (object):
 		self.fork_crown = Point(self.reach+gm.head_tube_length*math.cos(gm.head_tube_angle * DEG2RAD),
 					self.stack-gm.head_tube_length*math.sin(gm.head_tube_angle * DEG2RAD))
 		self.head_tube_crown = Point(self.reach, self.stack)
-		self.top_tube_end = self.head_tube_crown - Point(self.top_tube_length, 0)
+		self.top_tube_end = self.head_tube_crown - Point(gm.top_tube_length, 0)
 		self.seat_tube_junction = Point(-gm.seat_tube_length*math.cos(gm.seat_tube_angle * DEG2RAD),
 						 gm.seat_tube_length*math.sin(gm.seat_tube_angle * DEG2RAD))
 
 	def __str__(self):
-		_str = "{}:\n".format(self.__name__)
-		for key, val in __dict__.items():
+		_str = "{}:\n".format(self.__class__.__name__)
+		for key, val in self.__dict__.items():
 			if not key.startswith('__') and not callable(key):
 				_str += "\t{}: {}\n".format(key, val)
 		return _str
