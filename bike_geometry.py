@@ -1,3 +1,11 @@
+# New idea! We'll have one object (BikeInfo) that will store things like name, size, etc, then the
+# BikeInfo object will contain two other objects (frame geometry & cockpit geometry) which will
+# encapsulate the other bits. This way when the user goes to add a new bike type, all of the data
+# can be collected at once, making things a bit easier. This also simplifies some of the form
+# parsing by separating out string data from geometry (numeric) data.
+
+
+
 # Some thoughts:
 # The basic idea here is that we'll have a way of storing various types of bike geometry.
 # We'll also be able to store a cockpit configuration with a specific bike geometry, but they should
@@ -14,6 +22,7 @@
 # We will need some tools like in my spreadsheet that allow for the calculation of fork properties
 # if other geometric properties are known (wheelbase, stack, trail, etc)
 
+import dialogs
 import json
 import math
 import sys
@@ -51,10 +60,26 @@ class BikeInfo (object):
 	@classmethod
 	def fromDict(cls, data):
 		#print('data is {}'.format(data))
+		obj = cls()
 		for key, vals in data.items():
-			setattr(cls, key, vals)
-		#print('cls.__dict__ = {}'.format(cls.__dict__))
-		return cls
+			setattr(obj, key, vals)
+		#print('obj.__dict__ = {}'.format(obj.__dict__))
+		return obj
+		
+	@classmethod
+	def fromForm(cls):
+		obj = cls()
+		form_dict = [{'type': 'number', 'key': key, 'title': key.replace('_',' ').capitalize()} for key \
+			in obj.__dict__.keys() if not key.startswith('__') and not callable(key)]
+		print(obj)
+		print(obj.TYPE)
+		print(form_dict)
+		vals = dialogs.form_dialog(obj.TYPE, form_dict)
+		print(vals)
+		for key, val in vals.items():
+			setattr(obj, key, float(val))
+		print(obj)
+		return obj
 
 class BikeGeometry (BikeInfo):
 	""" This is a basic storage container for bicycle geometry information. It 
