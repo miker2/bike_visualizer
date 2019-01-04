@@ -1,7 +1,7 @@
 import console
 import ui
 import objc_util
-from bike_geometry import BikeGeometry
+from bike_geometry import BikeGeometry, GeometryMath
 from cockpit_setup import CockpitSetupView
 
 class BikeGeometryForm (ui.View):
@@ -20,7 +20,7 @@ class BikeGeometryForm (ui.View):
 		if len(sender.text) == 0:
 			return False
 		try:
-			int(sender.text)
+			float(sender.text)
 			sender.text_color = 'black'
 			return True
 		except ValueError:
@@ -59,12 +59,17 @@ class BikeGeometryForm (ui.View):
 		# NOTE: I need to figure out how to deal with converting the numbers to actual ints while leaving
 		# attributes that could be converted to ints (i.e. frame_size) as strings.
 		for key in bike_data.as_dict().keys():
-			setattr(bike_data, key, self.v[key].text)
-		print(bike_data_dict)
+			try:
+				val = float(self.v[key].text)
+			except ValueError:
+				val = self.v[key].text
+			setattr(bike_data, key, val)
+
 		print(bike_data.__dict__)
 		#print(self.csv.cockpit_data)
 		print(bike_data.toJson())
 		self.close_ui(sender)
+		GeometryMath(bike_data)
 		
 	def load_cockpit_setup(self, sender):
 		print("This would load the cockpit setup details (If empty, load blank form, otherwise load " \
