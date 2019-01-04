@@ -137,6 +137,7 @@ class GeometryMath (object):
 	def __init__(self, bike_geometry):
 		self.geometry = bike_geometry;
 		self.update()
+		print(self)
 		
 	def update(self):
 		gm = self.geometry
@@ -145,9 +146,23 @@ class GeometryMath (object):
 		self.stack = math.sin(gm.head_tube_angle*DEG2RAD) * (gm.head_tube_length + gm.fork_length - \
 			gm.fork_offset * math.cos(gm.head_tube_angle * DEG2RAD)) + gm.bb_drop
 		self.reach = gm.top_tube_length - self.stack * math.tan((90 - gm.seat_tube_angle) * DEG2RAD)
+		self.bottom_bracket = Point(0, 0)
 		self.front_axle = Point(gm.fork_offset / math.cos((90 - gm.head_tube_angle) * DEG2RAD) + \
-			(gm.head_tube_length + gm.fork_length - gm.fork_offset * math.tan((90 - self.head_tube_angle) * \
-			DEG2RAD)) * math.cos(self.head_tube_angle * DEG2RAD) + self.reach,
+			(gm.head_tube_length + gm.fork_length - gm.fork_offset * math.tan((90 - gm.head_tube_angle) * \
+			DEG2RAD)) * math.cos(gm.head_tube_angle * DEG2RAD) + self.reach,
 		   gm.bb_drop)
-		   
+		self.rear_axle = Point(-math.sqrt(gm.chainstay_length**2 - gm.bb_drop**2),
+				       gm.bb_drop)
+		self.fork_crown = Point(self.reach+gm.head_tube_length*math.cos(gm.head_tube_angle * DEG2RAD),
+					self.stack-gm.head_tube_length*math.sin(gm.head_tube_angle * DEG2RAD))
+		self.head_tube_crown = Point(self.reach, self.stack)
+		self.top_tube_end = self.head_tube_crown - Point(self.top_tube_length, 0)
+		self.seat_tube_junction = Point(-gm.seat_tube_length*math.cos(gm.seat_tube_angle * DEG2RAD),
+						 gm.seat_tube_length*math.sin(gm.seat_tube_angle * DEG2RAD))
 
+	def __str__(self):
+		_str = "{}:\n".format(self.__name__)
+		for key, val in __dict__.items():
+			if not key.startswith('__') and not callable(key):
+				_str += "\t{}: {}\n".format(key, val)
+		return _str
