@@ -1,5 +1,5 @@
-# New idea! We'll have one object (BikeInfo) that will store things like name, size, etc, then the
-# BikeInfo object will contain two other objects (frame geometry & cockpit geometry) which will
+# New idea! We'll have one object (BikeGeometry) that will store things like name, size, etc, then the
+# BikeGeometry object will contain two other objects (frame geometry & cockpit geometry) which will
 # encapsulate the other bits. This way when the user goes to add a new bike type, all of the data
 # can be collected at once, making things a bit easier. This also simplifies some of the form
 # parsing by separating out string data from geometry (numeric) data.
@@ -30,7 +30,7 @@ from point import Point
 
 DEG2RAD = math.pi/180
 
-def bikeInfoFromJson(jstr):
+def bikeGeometryFromJson(jstr):
 	jdict = json.loads(jstr)
 	print(jdict)
 	newClass = getattr(sys.modules[__name__],jdict['type'])
@@ -39,12 +39,23 @@ def bikeInfoFromJson(jstr):
 	
 
 class BikeInfo (object):
-	""" Base class for bike info objects (BikeGeometry & CockpitConfig). This adds a function that
-	    makes it easy to get the class member variables as a dictionary. """
-	# NOTE: This should be expanded to support outputting a JSON string for storage purposes.
-	
+	""" This is a class for holding bike related information (name, size, etc) as well as a
+	    FrameGeometry object and a CockpitGeometry object. """
+
 	def __init__(self):
-		self.TEST = self.__name__
+		# Default some member variables
+		self.bike_name = "unknown"
+		self.frame_size = 'L' # numeric sizes are also acceptable (i.e. 58cm)
+		self.wheel_size = '700c'
+
+		self.frame = FrameGeometry()
+		self.cockpit = CockpitGeometry();
+
+class BikeGeometry (object):
+	""" Base class for bike info objects (FrameGeometry & CockpitGeometry). This adds a function that
+	    makes it easy to get the class member variables as a dictionary. """
+	def __init__(self):
+		pass
 		
 	@property
 	def TYPE(self):
@@ -74,24 +85,21 @@ class BikeInfo (object):
 		print(obj)
 		print(obj.TYPE)
 		print(form_dict)
-		vals = dialogs.form_dialog(obj.TYPE, form_dict)
+		vals = dict() #dialogs.form_dialog(obj.TYPE, form_dict)
 		print(vals)
 		for key, val in vals.items():
 			setattr(obj, key, float(val))
 		print(obj)
 		return obj
 
-class BikeGeometry (BikeInfo):
+class FrameGeometry (BikeGeometry):
 	""" This is a basic storage container for bicycle geometry information. It 
 	    will be used calcuate various points on a bicycle in order to draw the 
 	    geometry of the bicycle. It can also be used in conjunction with the 
-	    CockpitConfig class in order to determine the stack/reach of various 
+	    CockpitGeometry class in order to determine the stack/reach of various
 	    points on the cockpit of the bicycle relative to the bottom bracket."""
 	def __init__(self):
 		# My bike geometry class needs the following properties:
-		self.bike_name = ""
-		self.frame_size = 58;
-		self.wheel_size = '700c';
 		self.bb_drop = 0
 		self.fork_length = 0
 		self.fork_offset = 0
@@ -104,7 +112,7 @@ class BikeGeometry (BikeInfo):
 		self.wheelbase_spec = 0
 		print('class name = {}'.format(self.TYPE))
 	
-class CockpitConfig (BikeInfo):
+class CockpitGeometry (BikeGeometry):
 	"""  """
 	def __init__(self, sl=110, sa=-6, tch=15, sph=20, sh=40):
 		self.stem_length = sl;

@@ -1,12 +1,12 @@
 import console
 import ui
 import objc_util
-from bike_geometry import BikeGeometry, GeometryMath
+from bike_geometry import FrameGeometry, GeometryMath
 from cockpit_setup import CockpitSetupView
 
-class BikeGeometryForm (ui.View):
+class FrameGeometryForm (ui.View):
 	def __init__(self, **kwargs):
-		super(BikeGeometryForm, self).__init__(**kwargs)
+		super(FrameGeometryForm, self).__init__(**kwargs)
 		self.v = ui.load_view()
 		objc_util.ObjCInstance(self.v['cockpit']).button().titleLabel().setLineBreakMode(0)
 		self.v.present('sheet')
@@ -55,7 +55,7 @@ class BikeGeometryForm (ui.View):
 			console.alert('Please finish filling out the form!','Check for blank fields and errors', 'OK',
 				hide_cancel_button=True)
 			return
-		bike_data = BikeGeometry()
+		bike_data = FrameGeometry()
 		# NOTE: I need to figure out how to deal with converting the numbers to actual ints while leaving
 		# attributes that could be converted to ints (i.e. frame_size) as strings.
 		for key in bike_data.as_dict().keys():
@@ -77,4 +77,4 @@ class BikeGeometryForm (ui.View):
 		selv.csv = CockpitSetupView()
 		print("cockpit setup loaded!")
 
-BikeGeometryForm()
+FrameGeometryForm()

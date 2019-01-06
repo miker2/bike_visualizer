@@ -22,6 +22,7 @@
 <body>
 <p>Add a new bike:</p>
 <form action="/add_bike" method="post">
+    <input type="hidden" name="type" value="{{geometry_type}}"/>
 %for item in fields:
     %big_name = item.replace("_"," ").capitalize()
     <p>

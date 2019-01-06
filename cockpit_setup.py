@@ -1,6 +1,6 @@
 import console
 import ui
-from bike_geometry import CockpitConfig
+from bike_geometry import CockpitGeometry
 from point import Point
 
 class CockpitSetupView (ui.View):
@@ -48,7 +48,7 @@ class CockpitSetupView (ui.View):
 			console.alert('Please finish filling out the form!','OK')
 			return
 
-		self.cockpit_data = CockpitConfig()
+		self.cockpit_data = CockpitGeometry()
 		for key in self.cockpit_data.as_dict().keys():
 			setattr(self.cockpit_data, key, int(self.v[key].text))
 		# Now we need to put this data somewhere. Ideally, the cockpit data is associated with a
