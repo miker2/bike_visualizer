@@ -1,3 +1,9 @@
+// Look at https://www.html5rocks.com/en/tutorials/canvas/performance/
+// for information on how to float multiple canvases.
+// I think that when I decide to draw the bicycles, I'll draw them all
+// on separate canvases, that way it is easy to add/delete them without
+// affecting the other drawings.
+
 console.log('Testing out my javascript');
 
 var canvas = document.querySelector('canvas');
@@ -20,8 +26,8 @@ c.fillRect(150, 60, width, height)
 // Need to figure out how to move the 'zero' coordinate of the canvas
 
 // Line
-var sizeWidth = canvas.clientWidth;
-var sizeHeight = canvas.clientHeight;
+var sizeWidth = canvas.width;
+var sizeHeight = canvas.height;
 var scaleWidth = sizeWidth/100;
 var scaleHeight = sizeHeight/100;
 var size = { width: sizeWidth, height: sizeHeight };
@@ -90,7 +96,7 @@ function animate() {
 		console.log({x_pos: x|0, y_pos: y|0, dx: dx, dy: dy})
 	}
 
-	if (y + radius >= sizeHeight || y - radius <= 0) {
+	if (y + radius > sizeHeight || y - radius < 0) {
 		dy = -dy;
 		console.log({x_pos: x|0, y_pos: y|0, dx: dx, dy: dy})
 	}
@@ -99,7 +105,7 @@ function animate() {
 	y += dy * deltaT;
 	
 	//console.log({x_pos: x, y_pos: y})
-	console.log(1/deltaT)
+	console.log("FPS: " + 1/deltaT)
 }
 
 animate()
